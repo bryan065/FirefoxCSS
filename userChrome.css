@@ -1,0 +1,61 @@
+@import url('components/floating-link-popup.css');
+@import url('components/vertical-tab.css');
+@import url('components/identity.css');
+@import url('components/iconic_firefox.css');
+@import url('components/rounded_content.css');
+@import url('components/context.css');
+
+/*main window background color fix*/
+html#main-window {
+    &:-moz-window-inactive {
+            background-color: var(--toolbox-bgcolor-inactive) !important;
+            transition: 0.2s ease !important;
+        }
+  background-color: var(--toolbox-bgcolor) !important;
+  transition: 0.2s ease !important;
+  --chrome-content-separator-color: none !important;
+  --toolbarbutton-border-radius: 8px !important;
+}
+
+/* hide toolbar buttons */
+hbox#nav-bar-customization-target.customization-target toolbarbutton#fxa-toolbar-menu-button.toolbarbutton-1.chromeclass-toolbar-additional.subviewbutton-nav,
+hbox#nav-bar-customization-target.customization-target toolbarbutton#firefox-view-button.toolbarbutton-1.chromeclass-toolbar-additional,
+hbox#nav-bar-customization-target.customization-target toolbarbutton#new-tab-button.toolbarbutton-1.chromeclass-toolbar-additional,
+hbox#nav-bar-customization-target.customization-target toolbarbutton#alltabs-button.toolbarbutton-1.chromeclass-toolbar-additional.tabs-alltabs-button
+{ display: none }
+ 
+/* context menu top left button padding */
+menugroup > menuitem:first-child {  
+    border-radius: 10px !important;
+    padding-left: 8px !important;
+}
+/* context menu top right button padding */
+menugroup > menuitem:last-child {  
+    border-radius: 10px !important;
+    padding-right: 8px !important;
+ 
+}
+/* context menu top buttons radius*/
+menugroup > menuitem {
+    border-radius: 10px !important;
+}
+menugroup > menuitem > hbox > image {  
+  border-radius: 10px !important;
+}
+/* for menu item with submenu  */
+.panel-header > .subviewbutton {
+    border-radius: 10px !important;
+  }
+
+/* findbar tweaks */
+findbar {
+    border: none !important;
+    margin: 8px 0px 6px 0px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #101010;
+}
+
+/* URLbar tweaks */
+#urlbar-container div#urlbar hbox#urlbar-background {
+    border: 0.5px solid var(--sidebar-border-color) !important;
+}

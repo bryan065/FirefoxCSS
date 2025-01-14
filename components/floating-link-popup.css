@@ -1,0 +1,11 @@
+@-moz-document url-prefix("chrome:") {
+  #statuspanel {
+    margin-left: 16px !important;
+    margin-bottom: 13px !important;
+  }
+  #statuspanel-label {
+    border-radius: 10px !important;
+    padding: 8px 10px 8px 10px !important;
+    border: 1px solid var(--zen-colors-border) !important;
+  }
+}

@@ -1,0 +1,61 @@
+/* round the content window and add some padding like Edge*/
+:root {   
+    & tabbox#tabbrowser-tabbox,
+    & #tabbrowser-tabpanels {
+        background-color: var(--toolbox-bgcolor) !important;
+        transition: 0.2s ease !important;
+    }
+    
+    & tabbox#tabbrowser-tabbox,
+    & #tabbrowser-tabpanels {
+        &:-moz-window-inactive {
+            background-color: var(--toolbox-bgcolor-inactive) !important;
+            transition: 0.2s ease !important;
+        }
+    }
+
+    &:not([inDOMFullscreen="true"], [sizemode="fullscreen"], [sizemode="maximized"], [chromehidden*="toolbar"], [chromehidden*="menubar"]) tabbox#tabbrowser-tabbox browser {
+        border-radius: 10px;
+        clip-path: circle(100%);
+        background-color: var(--toolbox-bgcolor) !important;
+    }
+}
+
+/* Sidebar tweaks */
+#sidebar-box.chromeclass-extrachrome.browser-toolbox-background {
+    &:-moz-window-inactive {
+        background-color: var(--toolbox-bgcolor-inactive) !important;
+    }
+    background-color: var(--toolbox-bgcolor) !important;
+    padding-top: 5px;
+    --content-area-shadow: none !important;
+}
+
+/*#sidebar-main:has([expanded]):hover ~ #sidebar-box.chromeclass-extrachrome.browser-toolbox-background {
+    mask-image: linear-gradient(to right, black, transparent);
+    transition: 0.3s;
+}*/
+
+/* rounded corners + outline */
+.browserStack browser[type="content"]  {
+	border-radius: 10px 0px 0px 10px !important;
+    border-width: 0.5px 0px 0.5px 0.5px;
+    border-style: solid;
+    border-color: var(--sidebar-border-color);
+    /*margin: 4px 6px 6px 0px;
+    box-shadow: 2px 2px 2px #101010;*/
+}
+
+#tabbrowser-tabbox {
+    box-shadow: none !important;
+}
+
+/* OLD WAY */
+
+/*
+.browserStack browser[type="content"] {
+    border-radius: 10px;
+    margin: 4px 6px 6px 10px;
+    box-shadow: 2px 2px 2px #101010;
+    overflow: hidden !important;
+}*/

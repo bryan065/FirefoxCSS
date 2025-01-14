@@ -1,0 +1,128 @@
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+    /*sidebar-main vbox.tab-label-container {
+        display: flex !important;
+    }*/
+    
+    /* hover expand tab bar */
+    sidebar-main{
+        transition: 1s !important;
+        z-index: 4 !important;
+    }
+    
+    /*#sidebar-main {
+        margin-top: 4px;
+        margin-bottom: 6px;
+    }*/
+    
+    #sidebar-main:has([expanded=""]):not(:hover) {
+        z-index: 4;
+        width: var(--tab-collapsed-width) !important;
+        transition: 0.3s !important;
+        border-color: var(--sidebar-border-color);
+    }
+    
+    #sidebar-main:has([expanded]):not(:hover) ~ #tabbrowser-tabbox {
+        transition: 0.3s !important;
+    }
+
+    #sidebar-main:has([expanded]):hover {
+        z-index: 4;
+        width: 20em !important;
+        transition: 0.3s !important;
+        box-shadow: 2px 2px 2px #101010;
+        border-radius: 0px 10px 10px 0px;
+        transition-delay: 50ms !important;
+        border-width: 0px 0.5px 0px 0px;
+        border-style: solid;
+        border-color: var(--sidebar-border-color);
+    }
+
+    #sidebar-main:has([expanded]):hover ~ #tabbrowser-tabbox {
+        margin-left: calc(-20em + 51px) !important;
+        transition: 0.3s !important;
+        transition-delay: 50ms !important;
+    }
+
+    /* adjust labels for expand tab bar */
+    /* regular tab labels */
+    sidebar-main .tab-text.tab-label {
+        visibility: hidden;
+        opacity: 0;
+        transition: 100ms;
+        transition-delay: 50ms;
+    }
+    #sidebar-main:hover > sidebar-main .tab-text.tab-label, sidebar-main .toolbarbutton-text {
+        visibility: visible;
+        opacity: 1;
+        transition: 100ms;
+        transition-delay: 50ms;
+    }
+
+    /* other button labels */
+    #sidebar-main:has([expanded]) > sidebar-main .toolbarbutton-text {
+        visibility: hidden !important;
+        opacity: 0;
+        transition: 100ms;
+        transition-delay: 50ms;
+    }
+    #sidebar-main:has([expanded]):hover > sidebar-main .toolbarbutton-text {
+        visibility: visible !important;
+        opacity: 1;
+        transition: 100ms;
+        transition-delay: 50ms;
+    }
+
+    /* hide the new vertical tab extension buttons */
+    div.wrapper button-group.tools-and-extensions.actions-list {
+        display: none !important;
+    }
+
+    /* current tab background adjustments */
+    #sidebar-main:has([expanded]):not(:hover) > sidebar-main .tab-background{
+        width: 32px !important;
+        margin-right: 50px !important;
+        transition: 0.3s !important;
+        transition-delay: 50ms;
+    }
+    #sidebar-main:has([expanded]):hover > sidebar-main .tab-background {
+        width: 90%;
+        transition: 0.3s;
+        transition-delay: 50ms;
+    }
+
+    /* hide new tab button background when collapsed */
+    #sidebar-main:not(:hover) > sidebar-main .toolbarbutton-1 {
+        background: none !important;
+        transition: 0.3s !important;
+        transition-delay: 50ms;
+    }
+    #sidebar-main:hover > sidebar-main .toolbarbutton-1 {
+        width: 90% !important;
+        transition: 0.3s;
+        transition-delay: 50ms;
+    }
+
+    /* close button adjustments */
+    #sidebar-main:not(:hover) .tab-close-button{
+        display: none;
+    }
+    #sidebar-main:hover .tab-close-button{
+        margin-right: 1px !important;
+        border-radius: 8px !important;
+    }
+
+
+    /* add small padding to top of tab bar*/
+    #sidebar-main sidebar-main box#vertical-tabs.customization-target {
+        margin-top: 8px;
+    }
+
+    /* vertical tab color tweaks+ */
+    #browser {
+        &:-moz-window-inactive {
+            background-color: var(--toolbox-non-lwt-bgcolor-inactive) !important;
+        }
+        background-color: var(--toolbox-non-lwt-bgcolor) !important;
+        transition: background-color var(--inactive-window-transition);
+    }
+}

@@ -1,0 +1,55 @@
+/* hide bookmark at top of context menu */
+menupopup#contentAreaContextMenu menugroup#context-navigation >
+  menuitem#context-bookmarkpage.menuitem-iconic {
+	 visibility: hidden;
+}
+
+/* hide contezxt menu items */
+menupopup#contentAreaContextMenu >
+  menuitem#context-pocket,
+  menuitem#context-inspect-a11y,
+  menuitem#context-print-selection,
+  menuitem#context-bookmarklink,
+  menuitem#context-savelinktopocket,
+  menuitem#_e6e36c9a-8323-446c-b720-a176017e38ff_-menuitem-_add-rss-feed.menuitem-iconic,
+  menu#_b9db16a4-6edc-47ec-a1f4-b86292ed211d_-menuitem-_vdh-top.menu-iconic,
+  menu#context-openlinkinusercontext-menu.context-menu-open-link {
+    display: none;
+}
+
+/* hide tab bar context menu items */
+menupopup#toolbar-context-menu > 
+  menuseparator#toolbarItemsMenuSeparator,
+  menuitem#toolbar-context-undoCloseTab {
+		display: none;
+}
+
+/* hide tab context menu items */
+menupopup#tabContextMenu > 
+  menuitem#context_bookmarkTab,
+  menuitem#context_undoCloseTab,
+  menu#context_reopenInContainer {
+	 display: none;
+}
+
+menupopup#contentAreaContextMenu menu#_4853d046-c5a3-436b-bc36-220fd935ee1d_-menuitem-_RootMenu.menu-iconic {
+  display: flex !important;
+  order: 9999 !important;
+}
+
+/* context menu theming */
+menupopup,
+.menupopup-arrowscrollbox {
+	min-width: 20vh !important;
+	--panel-background: var(--arrowpanel-background);
+	--panel-color: var(--arrowpanel-color);
+	--panel-border-color: var(--arrowpanel-border-color);
+	--panel-border-radius: var(--arrowpanel-border-radius);
+}
+.menupopup-arrowscrollbox {
+  box-shadow: 2px 2px 2px #1f1f1f !important;
+}
+menupopup > menuitem,
+menupopup > menu{
+  border-radius: 10px !important;
+}
