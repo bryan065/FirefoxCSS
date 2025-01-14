@@ -1,4 +1,4 @@
-Changes:
+## Changes:
 - Light/dark theme support
 - Rounded corners (including browser content window)
 - Identity badge colors
@@ -7,8 +7,8 @@ Changes:
 - Expand vertical tabs on hover (using Firefox's built in vertical tabs)
 - Hide Specific toolbar buttons (personalized to me)
 
-To-Do:
 
+## To-Do:
 - [ ] Adjust shadow darnkess/colors in light theme
 - [ ] Find a way to keep the Firefox vertical tabs always expanded (Will randomly revert to compact mode)
 - [ ] Find a way to restore drop shadows under sidebar and browser content windows.
