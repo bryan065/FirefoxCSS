@@ -6,6 +6,7 @@
 - Context menu theming, also removed unused entries (personalized to me)
 - Expand vertical tabs on hover (using Firefox's built in vertical tabs)
 - Hide Specific toolbar buttons (personalized to me)
+- Iconic Firefox (https://gist.github.com/emvaized/a379d61ed8970e5711ca7278a39c1895)
 
 
 ## To-Do:
